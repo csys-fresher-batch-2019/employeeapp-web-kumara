@@ -8,34 +8,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Employees</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body><% 		List<salarymodel> ne= (ArrayList) request.getAttribute("taxx");%>
+<body><jsp:include page="head.jsp"></jsp:include>
+<% 		List<salarymodel> ne= (ArrayList) request.getAttribute("taxx");%>
 <center>
 <thead>
 <tr><table border="2">
-	<b>
-	<th>Emp_ID</th>
-	<th>Department_ID</th>
-	<th>EmployeeName</th>
-	<th>Annualsalary</th>
-	<th>tax</th>
-	<th>year</th>
+<br><br><br>
+<br/></br></br>
 	
-	
-		
-	</b>
 </tr>
           <%   for (salarymodel ee : ne) { %>
+            	<b> <tr><th>Emp_ID</th>
+            	 <td> <%=ee.geteId() %></td><tr/>
+            	 <tr>	<th>Department_ID</th>
+            	 <td> <%=ee.getDepartmentId() %></td></tr>
+            	 <tr> <th>EmployeeName</th>
+            	 <td> <%=ee.getEmployeeName() %></td></tr>
             	 <tr>
-            	 <td> <%=ee.geteId() %></td>
-            	 <td> <%=ee.getDepartmentId() %></td>
-            	 <td><a href ="AddressdetailServlet?name=<%=ee.getEmployeeName()%>"><%=ee.getEmployeeName() %></a> </td>
-            	 
-            	<td> <%=ee.getTax() %>
-            	 <td> <%=ee.getAnnualSalary() %></td>
+            		<th>Annualsalary</th>
+            	 <td> <%=ee.getAnnualSalary() %></td></tr>
+            	 	<tr><th>tax</th>
+            	 <td> <%=ee.getTax() %> </td><tr/>
+            	 <tr>	<th>year</th>
             	 <td> <%=ee.getYear() %></td>
-            	 </tr>
+            	 </tr></b>
             	 
             <% }  %>
 </table>
@@ -46,11 +44,5 @@
 </br>
 </form></center>
 </thead>
-</body>
-</html>
-
-</body>
-</html>
-
 </body>
 </html>

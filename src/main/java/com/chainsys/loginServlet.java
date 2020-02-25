@@ -33,9 +33,9 @@ public class loginServlet extends HttpServlet {
 		response.sendRedirect("AllEmployee.jsp"); //http://cslh2037:8090/employee-web/AllEmployee.jsp
 	 }
 	 else
-	 {
-		 System.out.println("Password Wrong");
-		 response.sendRedirect("login.jsp");
+	 {response.sendRedirect("login.jsp?errorMessage=Invalid login");
+		// System.out.println("Password Wrong");
+		// response.sendRedirect("login.jsp");
 	 }
 	
 

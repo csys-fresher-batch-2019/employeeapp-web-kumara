@@ -15,7 +15,6 @@
 </head>
 <body>
 <jsp:include page="head.jsp"></jsp:include>
-
 <center>
 <h3> EMPLOYEE DETAILS </h3>
 

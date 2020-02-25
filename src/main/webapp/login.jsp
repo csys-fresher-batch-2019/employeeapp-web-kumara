@@ -1,6 +1,7 @@
 
+     
     
-    
+  
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,13 +12,32 @@
 <body>
 
 <jsp:include page="header.jsp"></jsp:include>
+<style>
+
+
+body
+{
+
+  background-image: url('assets/images/1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}</style>
 
  <form action="loginServlet">
 <table align="center">
 <center><b>
+
 <h3> Login </h3>
 <br><br>
-<tr><br>
+<br>
+ <%
+String errorMessage = request.getParameter("errorMessage");
+if (errorMessage != null) {
+out.println("<font color='red'>" + errorMessage + "</font>");
+}
+%>
+<tr>
 <td>UserName</td>
 <td><input type="text" name="Username" /></td>
 </tr>
@@ -28,6 +48,7 @@
 </tr></b><br/>
 </center>
 <tr>
+ 
 
 <td><span style="color:red"><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%></span></td>
 </tr>
@@ -37,7 +58,8 @@
 </br>
 </tr>
 </table>
+
 </form>
 </body>
-</html> 
+</html>
     

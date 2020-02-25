@@ -39,7 +39,8 @@ body
     <br> <a href ="update.jsp">Set department</a><br/>
      <br> <a href ="dept.jsp">EmployeeDepartment</a></br>
     <br>   <a href = "bloodsearch.jsp">Blood Search</a>         <br>
- 
+ <br> <a href="calculatetax.jsp">Taxcalculation</a></br>
+ <br> <a href ="promotionSalary.jsp">promotionSalary</a></br>
      <br> <a href ="delete.jsp">Remove Employee</a><br/>
      
   </B></big></body>
